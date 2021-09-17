@@ -14,10 +14,10 @@ declare module 'styled-components' {
     font: {
       family: string;
       sizes: {
-        small: number;
-        medium: number;
-        large: number;
-        xlarge: number;
+        sm: number;
+        md: number;
+        lg: number;
+        xl: number;
       };
       weights: {
         regular: number;
@@ -25,8 +25,17 @@ declare module 'styled-components' {
     };
 
     spacing: {
-      small: number;
-      large: number;
+      sm: number;
+      lg: number;
+    };
+
+    grid: {
+      columns: number;
+    };
+
+    transition: {
+      delay: number;
+      timingFunction: string;
     };
 
     colors: {
@@ -44,10 +53,11 @@ declare module 'styled-components' {
     background: string;
 
     breakpoints: {
-      small: number;
-      medium: number;
-      large: number;
-      xlarge: number;
+      xs: number;
+      sm: number;
+      md: number;
+      lg: number;
+      xl: number;
     };
   }
 }
