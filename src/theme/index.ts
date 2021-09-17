@@ -1,13 +1,13 @@
 import {DefaultTheme, Theme} from 'styled-components';
 
-const defaultTheme: Omit<DefaultTheme, 'background'> = {
+export const defaultTheme: Omit<DefaultTheme, 'background'> = {
   font: {
-    family: 'Gordita, sans-serif',
+    family: 'Scto Grotesk A, sans-serif',
     sizes: {
-      small: 1.25,
-      medium: 1.5,
-      large: 1.875,
-      xlarge: 4.375,
+      sm: 1.25,
+      md: 1.5,
+      lg: 1.875,
+      xl: 4.375,
     },
     weights: {
       regular: 400,
@@ -15,8 +15,17 @@ const defaultTheme: Omit<DefaultTheme, 'background'> = {
   },
 
   spacing: {
-    small: 2.5,
-    large: 5,
+    sm: 2.5,
+    lg: 5,
+  },
+
+  grid: {
+    columns: 12,
+  },
+
+  transition: {
+    delay: 0.3,
+    timingFunction: 'ease-in-out',
   },
 
   colors: {
@@ -32,10 +41,11 @@ const defaultTheme: Omit<DefaultTheme, 'background'> = {
   },
 
   breakpoints: {
-    small: 565,
-    medium: 768,
-    large: 992,
-    xlarge: 1200,
+    xs: 0,
+    sm: 565,
+    md: 768,
+    lg: 992,
+    xl: 1200,
   },
 };
 
