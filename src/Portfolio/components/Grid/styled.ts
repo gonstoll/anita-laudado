@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Cell = styled.div<{$sizes?: Sizes}>`
-  padding: 0 ${({theme}) => theme.spacing.sm / 2}rem;
+  padding: ${({theme}) => theme.spacing.sm / 2}rem;
   flex: 0 0 auto;
 
   ${props => {

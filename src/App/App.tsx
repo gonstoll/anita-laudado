@@ -1,44 +1,34 @@
 import {ThemeProvider, createGlobalStyle} from 'styled-components';
 import {useTheme} from '../shared/hooks';
 import Portfolio from '../Portfolio';
-import SctoGroteskAWoff from '../assets/fonts/Scto_Grotesk_A.woff2';
-import SctoGroteskAWoff2 from '../assets/fonts/Scto_Grotesk_A.woff2';
 
 const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: ${props => props.theme.background};
+    transition: background-color 0.3s linear;
+    border-top: 7px solid ${props => props.theme.colors.black};
+  }
+
   body, html, #root {
-    background-color: ${({theme}) => theme.background};
-    font-family: ${({theme}) => theme.font.family};
-    transition: background-color .3s linear;
-    height: 100%;
+    font-family: ${props => props.theme.font.family};
     margin: 0;
     font-size: 12px;
     margin: 0;
 
-    @media screen and (min-width: ${({theme}) => theme.breakpoints.md}px) {
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
       font-size: 16px;
     }
   }
 
   #root {
-    padding: ${({theme}) => theme.spacing.sm}rem;
+    padding: ${props => props.theme.spacing.sm}rem;
     display: flex;
     flex-direction: column;
-    gap: ${({theme}) => theme.spacing.lg}rem;
+    gap: ${props => props.theme.spacing.lg}rem;
   }
 
   * {
     box-sizing: border-box;
-  }
-`;
-
-const Fonts = createGlobalStyle`
-  @font-face {
-    font-family: 'Scto Grotesk A';
-    font-weight: 400;
-    font-display: block;
-    src: local('Scto Grotesk A'), local('Scto Grotesk A'),
-        url(${SctoGroteskAWoff2}) format('woff2'),
-        url(${SctoGroteskAWoff}) format('woff');
   }
 `;
 
@@ -47,7 +37,6 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Fonts />
       <GlobalStyles />
       <Portfolio changeTheme={changeTheme} />
     </ThemeProvider>
