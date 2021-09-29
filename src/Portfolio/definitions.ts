@@ -1,4 +1,4 @@
-import resume from '../assets/docs/resume.pdf';
+import resume from '../assets/docs/Ana_Laudado_2021.pdf';
 
 type LinkSection = 'contact' | 'social' | 'other';
 
