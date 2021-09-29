@@ -5,7 +5,6 @@ import {defaultTheme} from '../../../../theme';
 const StyledLink = styled.a<{color?: keyof DefaultTheme['colors']}>`
   color: ${({color}) =>
     color ? defaultTheme.colors[color] : defaultTheme.colors.blue};
-  font-size: ${props => props.theme.font.sizes.sm}rem;
   text-decoration: none;
   width: fit-content;
 

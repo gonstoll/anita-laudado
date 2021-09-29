@@ -3,21 +3,22 @@ import {useTheme} from '../shared/hooks';
 import Portfolio from '../Portfolio';
 
 const GlobalStyles = createGlobalStyle`
+  html {
+    font-size: 10px;
+    @media screen and (min-width: ${props => props.theme.breakpoints.sm}px) {
+      font-size: 13px;
+    }
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+      font-size: 16px;
+    }
+  }
+
   body {
     background-color: ${props => props.theme.background};
     transition: background-color 0.3s linear;
     border-top: 4px solid ${props => props.theme.colors.black};
-  }
-
-  body, html, #root {
     font-family: ${props => props.theme.font.family};
     margin: 0;
-    font-size: 13px;
-    margin: 0;
-
-    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
-      font-size: 16px;
-    }
   }
 
   #root {
@@ -25,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     gap: ${props => props.theme.spacing.lg}rem;
+    font-size: ${({theme}) => theme.font.sizes.sm}rem;
   }
 
   * {
