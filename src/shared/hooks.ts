@@ -20,7 +20,17 @@ export function useTheme(delay?: number) {
     []
   );
 
-  const [theme, setTheme] = useState<Theme>(storedTheme || 'green');
+  const getInitialRandomTheme = () => {
+    const filteredThemes = THEMES_ALIASES.filter(
+      themeAlias => themeAlias !== storedTheme
+    );
+    const random =
+      filteredThemes[Math.floor(Math.random() * filteredThemes.length)];
+    localStorage.setItem('theme', random);
+    return random;
+  };
+
+  const [theme, setTheme] = useState<Theme>(getInitialRandomTheme() || 'green');
 
   const randomTheme = useMemo(() => {
     const filteredThemes = THEMES_ALIASES.filter(

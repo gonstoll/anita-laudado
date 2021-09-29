@@ -19,9 +19,11 @@ export const StyledText = styled.p<{
   size: Size;
   noMargin?: 'top' | 'bottom' | 'left' | 'right' | boolean;
   color?: keyof DefaultTheme['colors'];
+  bold?: boolean;
 }>`
-  ${({color}) => color && `color: ${defaultTheme.colors[color]};`}
-  ${({size}) => fontStyles[size]}
+  ${({color}) => color && `color: ${defaultTheme.colors[color]};`};
+  ${({size}) => fontStyles[size]};
+  ${({bold}) => bold && 'font-weight: 700'};
   ${({noMargin}) => {
     if (!noMargin) return null;
     switch (noMargin) {

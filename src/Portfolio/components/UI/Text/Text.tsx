@@ -16,16 +16,23 @@ type ElementTag =
   | 'label';
 
 interface Props {
-  size: Size;
+  size?: Size;
   noMargin?: 'top' | 'bottom' | 'left' | 'right' | boolean;
   color?: keyof DefaultTheme['colors'];
   element?: ElementTag;
+  bold?: boolean;
   children?: ReactNode;
 }
 
-export default function Text({size, element, children, ...extraProps}: Props) {
+export default function Text({
+  size = 'body',
+  color = 'grey',
+  element = 'p',
+  children,
+  ...extraProps
+}: Props) {
   return (
-    <StyledText size={size} as={element} {...extraProps}>
+    <StyledText size={size} as={element} color={color} {...extraProps}>
       {children}
     </StyledText>
   );
