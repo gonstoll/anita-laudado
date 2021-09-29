@@ -6,13 +6,13 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${props => props.theme.background};
     transition: background-color 0.3s linear;
-    border-top: 7px solid ${props => props.theme.colors.black};
+    border-top: 4px solid ${props => props.theme.colors.black};
   }
 
   body, html, #root {
     font-family: ${props => props.theme.font.family};
     margin: 0;
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
 
     @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {

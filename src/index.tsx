@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import SctoGroteskAWoff from './assets/fonts/Scto_Grotesk_A.woff2';
+import SctoGroteskAWoff from './assets/fonts/Scto_Grotesk_A.woff';
 import SctoGroteskAWoff2 from './assets/fonts/Scto_Grotesk_A.woff2';
+import SctoGroteskAWoffBold from './assets/fonts/Scto_Grotesk_A_Bold.woff';
+import SctoGroteskAWoffBold2 from './assets/fonts/Scto_Grotesk_A_Bold.woff2';
 
 /** Hack to avoid multiple calls to loaded font */
 const loadFonts = () => {
@@ -15,8 +17,16 @@ const loadFonts = () => {
       font-weight: 400;
       font-display: block;
       src: local('Scto Grotesk A'), local('Scto Grotesk A'),
-          url(${SctoGroteskAWoff2}) format('woff2'),
-          url(${SctoGroteskAWoff}) format('woff');
+          url(${SctoGroteskAWoff}) format('woff'),
+          url(${SctoGroteskAWoff2}) format('woff2');
+    }
+    @font-face {
+      font-family: 'Scto Grotesk A';
+      font-weight: 700;
+      font-display: block;
+      src: local('Scto Grotesk A'), local('Scto Grotesk A'),
+          url(${SctoGroteskAWoffBold}) format('woff'),
+          url(${SctoGroteskAWoffBold2}) format('woff2');
     }
   `;
   head.appendChild(style);

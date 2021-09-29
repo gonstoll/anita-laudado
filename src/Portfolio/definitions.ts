@@ -2,45 +2,41 @@ import resume from '../assets/docs/resume.pdf';
 
 type LinkSection = 'contact' | 'social' | 'other';
 
-type Links = Record<
-  LinkSection,
-  {link?: string; download?: boolean; text: string}[]
->;
+type Links = Record<LinkSection, {link: string; text: string}[]>;
 
 export const links: Links = {
   contact: [
     {
       link: 'mailto:anitalaudado@gmail.com',
-      text: '↳ anitalaudado@gmail.com',
+      text: 'anitalaudado@gmail.com',
     },
     {
       link: 'tel:+4550237037',
-      text: '↳ (+45) 50237037',
+      text: '(+45) 50237037',
     },
   ],
   social: [
     {
       link: 'https://www.linkedin.com/in/ana-laudado/',
-      text: '↳ LinkedIn',
+      text: 'LinkedIn',
     },
     {
       link: 'https://dribbble.com/anitalaudado',
-      text: '↳ Dribbble',
+      text: 'Dribbble',
     },
     {
       link: 'https://medium.com/@anitalaudado',
-      text: '↳ Medium',
+      text: 'Medium',
     },
   ],
   other: [
     {
       link: resume,
-      download: true,
-      text: '↳ Resume',
+      text: 'Resume',
     },
     {
       link: '',
-      text: '↳ My recipe blog',
+      text: 'My recipe blog',
     },
   ],
 };
