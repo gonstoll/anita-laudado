@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.footer`
-  margin-top: ${({theme}) => theme.spacing.lg}rem;
+  margin-top: ${({theme}) => theme.spacing.sm}rem;
 `;
 
 export default function Footer() {
