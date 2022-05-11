@@ -25,8 +25,8 @@ export const links: Links = {
       text: 'Dribbble',
     },
     {
-      link: 'https://medium.com/@anitalaudado',
-      text: 'Medium',
+      link: 'https://www.behance.net/anitalaudado',
+      text: 'Behance',
     },
   ],
   other: [
