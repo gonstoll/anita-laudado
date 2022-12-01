@@ -21,10 +21,6 @@ export const links: Links = {
       text: 'LinkedIn',
     },
     {
-      link: 'https://dribbble.com/anitalaudado',
-      text: 'Dribbble',
-    },
-    {
       link: 'https://www.behance.net/anitalaudado',
       text: 'Behance',
     },
@@ -33,10 +29,6 @@ export const links: Links = {
     {
       link: resume,
       text: 'Resume',
-    },
-    {
-      link: '',
-      text: 'My recipe blog',
     },
   ],
 };
